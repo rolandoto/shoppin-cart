@@ -6,6 +6,7 @@ import Header from './component/Header'
 import UseFilters from './Hooks/UseFilters'
 import { Footer } from './component/Footer'
 import Cart from './component/Cart'
+import { CartProviders } from './context/Cart'
 
 function App() {
 
@@ -15,10 +16,12 @@ function App() {
 
   return (
     <>
+    <CartProviders>
       <Header  />
       <Cart />
       <Products products={filteredProduct} />
       <Footer />
+      </CartProviders>
     </>
   )
 }
