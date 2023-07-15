@@ -86,7 +86,7 @@ const CART_ACTION_TYPE ={
       }
   }
   
-  export const cartReducer =(state,action) =>{
+  export const CartReducer =(state,action) =>{
     const { type: actionType } = action //la aciotn que llegue aqui
     const updateState = UPDATE_STATE_BY_ACTION[actionType]
     return updateState ?updateState(state,action):state//para que actualize cada vez que se ejecute la actions
